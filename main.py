@@ -137,7 +137,7 @@ def run_particle_bot(ticker_symbol, deviation_threshold=1.0):
         except Exception as e:
             print(f"Error fetching data: {e}. Retrying...")
             
-        time.sleep(900) 
+        time.sleep(300) 
 
 if __name__ == "__main__":
     # We are tracking Reliance Industries on the Indian NSE
