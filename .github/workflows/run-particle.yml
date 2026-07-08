@@ -1,0 +1,25 @@
+name: Particle Filter Bot
+
+on:
+  workflow_dispatch: # Allows you to run it manually with a button click
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+           
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+         
+      - name: Run script
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python -u main.py
