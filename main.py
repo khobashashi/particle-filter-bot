@@ -141,4 +141,4 @@ def run_particle_bot(ticker_symbol, deviation_threshold=1.0):
 
 if __name__ == "__main__":
     # We are tracking Reliance Industries on the Indian NSE
-    run_particle_bot("USDEUR=X", deviation_threshold=1.4)
+    run_particle_bot("HDFCBANK.NS", deviation_threshold=1.4)
